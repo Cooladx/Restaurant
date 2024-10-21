@@ -42,4 +42,11 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+
+  devServer: {
+    static: path.join(__dirname, "dist"), // Serve static files from the dist directory
+    compress: true,
+    port: 8000, // Change this to your preferred port
+    open: true, // Automatically open the browser
+  },
 };

@@ -1,8 +1,9 @@
 // homePage.ts
 
-import donut from './images/donut.jpg';
+import donut from './images/donut2.jpg';
 export default pageLoad;
 
+// Loads the DOM elements for the logo and the contents of the home page for the resturant.
 function pageLoad() {
     console.log('if you are seeing this, it works!');
 
@@ -13,14 +14,26 @@ function pageLoad() {
     content?.appendChild(headLine);
 
     const description = document.createElement('p');
+    description.classList.add('desc');
     description.textContent =
         'Step into a magical world where every corner is filled with delightful treats! At Sweet Haven, we’ve created a candy paradise for kids and adults alike. From classic favorites like gummies and chocolates to unique, handcrafted sweets, our menu is a sugary dream come true. Whether you’re celebrating a special occasion or just satisfying your sweet tooth, our colorful atmosphere and friendly staff will make your visit unforgettable. Come and indulge in a place where every bite brings happiness!';
     content?.appendChild(description);
 
-    const navbar = document.querySelector('.navbar');
-    const image = document.createElement('img');
-    image.src = donut;
+    // Assuming you have the `donut` variable defined and pointing to your image source
+    const header = document.querySelector('header'); // Select the header
 
-    navbar?.prepend(image);
-    image.classList.add('logo');
+    // Create a banner div to hold the image
+    const banner = document.createElement('div');
+    banner.classList.add('banner'); // Add a class for styling
+
+    // Create the image element
+    const image = document.createElement('img');
+    image.src = donut; // Use the donut image source
+    image.classList.add('logo'); // Add a class for styling
+
+    // Append the image to the banner
+    banner.appendChild(image);
+
+    // Prepend the banner to the header
+    header?.prepend(banner);
 }

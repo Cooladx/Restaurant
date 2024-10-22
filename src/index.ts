@@ -1,5 +1,5 @@
 // index.js
-import "./styles.css";
-import pageLoad from "./homepage";
+import './styles.css';
+import pageLoad from './homepage';
 
 pageLoad();

@@ -9,11 +9,17 @@ body {
     background-color: rebeccapurple;
 }
 
+.banner img {
+    width: 100%; /* Make the image take full width of the banner */
+    height: 400px; /* Maintain the aspect ratio */
+    display: block; /* Prevents extra space below the image */
+}
+
 nav {
     display: flex;
     margin: 0 auto;
     background-color: red;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .nav-item {
@@ -22,19 +28,17 @@ nav {
     font-size: 2rem;
 }
 
-banner {
-    width: 100%; /* Make the banner take the full width of the header */
-}
-
-.banner img {
-    width: 100%; /* Make the image take full width of the banner */
-    height: 400px; /* Maintain the aspect ratio */
-    display: block; /* Prevents extra space below the image */
-}
-
 #content {
     display: flex;
     flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: aliceblue;
+    border-radius: 20px;
 }
 
 .desc {
@@ -43,10 +47,28 @@ banner {
     margin: 0 auto;
     line-height: 2;
     font-family: 'Courier New', Courier, monospace;
+    background-color: aliceblue;
+    border-radius: 20px;
+    font-size: 2rem;
 }
 
-h1 {
+h2 {
+    font-size: 4rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: red;
+    max-width: 600px;
+}
+.board {
+    margin-top: 0.55rem;
+    background-color: aliceblue;
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.9;
+    margin: 0 auto;
+}
+
+.sethours {
+    list-style: none;
 }

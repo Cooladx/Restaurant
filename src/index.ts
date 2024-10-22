@@ -1,5 +1,5 @@
 // index.js
 import "./styles.css";
-import { greeting } from "./greeting";
+import pageLoad from "./homepage";
 
-console.log(greeting);
+pageLoad();

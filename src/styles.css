@@ -1,4 +1,40 @@
 /* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  background-color: rebeccapurple;
+    background-color: rebeccapurple;
+}
+
+nav {
+    display: flex;
+    margin: 0 auto;
+    background-color: red;
+    justify-content: space-between;
+}
+
+.nav-items {
+    padding: 1rem;
+    color: red;
+}
+
+.logo {
+    max-width: 100px; /* Set a maximum width for the logo */
+    width: auto; /* Allow the browser to set the width while maintaining the aspect ratio */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Space between the logo and buttons */
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

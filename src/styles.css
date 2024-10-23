@@ -31,6 +31,7 @@ nav {
 #content {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 h1 {
@@ -67,6 +68,7 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.9;
     margin: 0 auto;
+    margin-bottom: 5rem;
 }
 
 .sethours {

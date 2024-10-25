@@ -74,3 +74,23 @@ h2 {
 .sethours {
     list-style: none;
 }
+
+/* MENU page */
+
+.mshakes {
+    width: fit-content;
+}
+
+.shakemaker {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.shakemaker img {
+    max-width: 700px; /* You can customize the width */
+    max-height: 1000px; /* Customize height if needed */
+    margin-top: 3rem;
+    object-fit: cover; /* Ensures that the images cover the space proportionally */
+}

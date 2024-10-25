@@ -16,7 +16,7 @@ function pageLoad() {
     image.classList.add('logo'); // Add a class for styling
 
     // Append the image to the banner
-    banner.appendChild(image);
+    banner?.appendChild(image);
 
     // Prepend the banner to the header
     header?.prepend(banner);

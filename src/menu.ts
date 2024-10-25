@@ -33,18 +33,31 @@ function menuLoad() {
 
     const imgStorageOfShakes: string[] = [strawberry, chocolate, oreo, vanilla];
 
-    createImagesOfShakes(imgStorageOfShakes, shakestore);
+    createImages(imgStorageOfShakes, shakestore);
 
-    // const sweets: HTMLElement = document.createElement('section');
-    // sweets.classList.add('sweets');
-    // content?.appendChild(sweets);
+    const sweets: HTMLElement = document.createElement('section');
+    sweets.classList.add('sweets');
+    content?.appendChild(sweets);
+
+    const sweetTopic: HTMLElement = document.createElement('h2');
+    sweetTopic.classList.add('sugarsweet');
+    sweetTopic.textContent = 'Sweets';
+    sweets?.appendChild(sweetTopic);
+
+    const sweetstore: HTMLElement = document.createElement('div');
+    sweetstore.classList.add('sweetmaker');
+    sweets.appendChild(sweetstore);
+
+    const imgStorageOfSweets: string[] = [bbcheesecake, cakepop, macarons, oatmeal];
+    createImages(imgStorageOfSweets, sweetstore);
 }
 
-// Function to create images and append them to the section shakes.
-// It will return elements of img
-// The parameters are imgStorageOfShakes which is an array of img imports and
-function createImagesOfShakes(imgStorageOfShakes: string[], shakestore: HTMLElement) {
-    imgStorageOfShakes.forEach((image: string) => {
+// Function to create images and append them to the section.
+// The parameters are imgStorage which is an array of img imports.
+// and sends a div element which will be appended each img element as a final result.
+
+function createImages(imgStorage: string[], shakestore: HTMLElement) {
+    imgStorage.forEach((image: string) => {
         const img = document.createElement('img');
         img.src = image;
         shakestore.appendChild(img);

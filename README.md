@@ -13,7 +13,7 @@ cd <repository-name>
 
 Do the following:
 
-`bash npm install `
+` npm install `
 
 installs all dependencies in the repo that I have included. You can take a look at package.json for the devDependencies.
 
@@ -21,10 +21,10 @@ make sure to make a folder called dist in the root directory of the repo folder 
 
 Now that you can run the project, run
 
-`bash npx webpack `
+` npx webpack `
 
 then if you want to change in action the page while adding your own images, run
 
-`bash  npx webpack serve `
+`  npx webpack serve `
 
 (hosts a live server page on port 8000, you can change this port in the webpack.config.js file.)

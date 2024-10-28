@@ -11,12 +11,13 @@ import macarons from './images/sweets/macarons.jpg';
 import oatmeal from './images/sweets/oatmeal.jpg';
 const menuBtn = document.querySelector<HTMLElement>('#card');
 
+// Loads the DOM elements for the contents of the menu page for the restaurant.
 function menuLoad() {
     const content = document.querySelector<HTMLElement>('#content');
     if (content) {
         content.textContent = '';
     } else {
-        console.error('menuBtn not found:', menuBtn);
+        console.error('content not found:', content);
     }
 
     const shakes: HTMLElement = document.createElement('section');
@@ -55,7 +56,6 @@ function menuLoad() {
 // Function to create images and append them to the section.
 // The parameters are imgStorage which is an array of img imports.
 // and sends a div element which will be appended each img element as a final result.
-
 function createImages(imgStorage: string[], shakestore: HTMLElement) {
     imgStorage.forEach((image: string) => {
         const img = document.createElement('img');

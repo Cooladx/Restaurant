@@ -1,24 +1,20 @@
 import donut from './images/donut2.jpg';
 export default pageLoad;
+export { createFooter };
 
 // Loads the DOM elements for the logo and the contents of the home page for the resturant.
 function pageLoad() {
-    // Assuming you have the `donut` variable defined and pointing to your image source
-    const header = document.querySelector('header'); // Select the header
+    const header = document.querySelector('header');
 
-    // Create a banner div to hold the image
     const banner: HTMLElement = document.createElement('div');
-    banner.classList.add('banner'); // Add a class for styling
+    banner.classList.add('banner');
 
-    // Create the image element
     const image = document.createElement('img');
-    image.src = donut; // Use the donut image source
-    image.classList.add('logo'); // Add a class for styling
+    image.src = donut;
+    image.classList.add('logo');
 
-    // Append the image to the banner
     banner?.appendChild(image);
 
-    // Prepend the banner to the header
     header?.prepend(banner);
 
     const content = document.querySelector('#content');
@@ -53,6 +49,7 @@ function pageLoad() {
     ];
 
     createList(workHoursList, hours);
+    createFooter();
 }
 
 // Function to create an unordered list with a bullet of a full schedule.
@@ -69,4 +66,15 @@ function createList(workHoursList: string[], parentElement: HTMLElement): HTMLEl
     parentElement = parentElement.appendChild(ul);
     parentElement.classList.add('sethours');
     return parentElement;
+}
+
+//Function to create footer, takes no parameters. Only used once for this one loading page.
+// It will statically stay on other pages even when DOM is reloaded so no imports are needed.
+
+function createFooter() {
+    const footer = document.createElement('footer');
+    document.body.appendChild(footer);
+    const ending = document.createElement('p');
+    footer.appendChild(ending);
+    ending.textContent = '©  2024 Sweet Haven. All rights reserved.';
 }

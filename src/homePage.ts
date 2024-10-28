@@ -2,10 +2,13 @@
 
 export default homeLoad;
 export { homebtn };
+import { createFooter } from './loadingPage';
 
 const homebtn = document.querySelector<HTMLElement>('#landingPage');
 
 // Loads the DOM elements for the contents of the home page for the resturant.
+// Basically the same as loadingPage, but the purpose of this page is to
+
 function homeLoad() {
     const content = document.querySelector<HTMLElement>('#content');
     if (content) {
